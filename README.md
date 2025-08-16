@@ -28,7 +28,7 @@ Este script PHP (`descargar_informe.php`) es una herramienta robusta y flexible 
 3.  **Configuración del Informe**:
 
       * Asegúrate de tener un archivo `config.php` en la misma carpeta que `descargar_informe.php`. Este archivo debe devolver un array con todas las configuraciones del informe.
-      * Prepara tu fuente de datos. El script asume que un archivo (`../src/application/informeGestionExcel.php` en el ejemplo) genera un array llamado `$registros`.
+      * Prepara tu fuente de datos. El script asume que un archivo (`../src/Application/informeGestionExcel.php` en el ejemplo) genera un array llamado `$registros`.
 
 ## Estructura de Archivos 📂
 
@@ -40,7 +40,7 @@ Este script PHP (`descargar_informe.php`) es una herramienta robusta y flexible 
 ├── composer.lock
 ├── vendor/                  # Dependencias de Composer (incluyendo PhpSpreadsheet)
 └── src/
-    └── application/
+    └── Application/
         └── informeGestionExcel.php  # Archivo que genera los datos ($registros)
 ```
 

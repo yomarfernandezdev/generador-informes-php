@@ -7,7 +7,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 // Incluye el archivo que genera el array $registros
 // Asumimos que la lógica para crear el array $registros ya existe en este archivo
-include_once './src/application/informeGestion.php'; 
+include_once './src/Application/informeGestion.php'; 
 // Reemplaza con la ruta correcta si es necesario
 
 // 1. Crear una nueva hoja de cálculo
@@ -57,7 +57,7 @@ $sheet->fromArray($dataForExcel, NULL, 'A2');
 
 // 5. Configurar los encabezados de la respuesta HTTP para la descarga
 $fileName = 'informe_gestion_' . date('Y-m-d') . '.xlsx';
-header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+header('Content-Type: Application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment; filename="' . $fileName . '"');
 header('Cache-Control: max-age=0');
 
