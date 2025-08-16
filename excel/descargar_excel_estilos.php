@@ -9,7 +9,7 @@ use PhpOffice\PhpSpreadsheet\Style\Border;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 
 // Incluye el archivo que genera el array $registros
-include_once './src/application/informeGestion.php'; 
+include_once './src/Application/informeGestion.php'; 
 
 $spreadsheet = new Spreadsheet();
 $sheet = $spreadsheet->getActiveSheet();
@@ -87,7 +87,7 @@ foreach (range('A', $highestColumn) as $columnID) {
 }
 
 $fileName = 'informe_gestion_' . date('Y-m-d') . '.xlsx';
-header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+header('Content-Type: Application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment; filename="' . $fileName . '"');
 header('Cache-Control: max-age=0');
 
